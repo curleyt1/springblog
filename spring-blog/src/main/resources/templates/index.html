@@ -1,0 +1,30 @@
+<script type="importmap">
+	{
+		"imports": {
+			...
+			"vue": "/npm/vue/dist/vue.esm.browser.js"
+		}
+	}
+</script>
+
+<script type="module">
+	import Vue from 'vue';
+
+	const EventHandling = {
+		data() {
+			return {
+				message: 'Hello Vue.js!'
+			}
+		},
+		methods: {
+			reverseMessage() {
+				this.message = this.message
+					.split('')
+					.reverse()
+					.join('')
+			}
+		}
+	}
+
+	new Vue(EventHandling).$mount("#event-handling");
+</script>

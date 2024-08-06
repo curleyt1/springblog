@@ -8,12 +8,27 @@
     <p>Get your greeting <a href="/greeting">here</a></p>
 </body>
 
-<script 
+<!-- Vue Not Set Up Yet -->
+
+<!-- <script 
   src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js">
 </script>
 <script 
   src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js">
 </script>
+
+<div id="contents"></div>
+
+<script type="text/babel">
+    var app = new Vue({
+        el: '#contents'
+    });
+</script>
+
+<div class="lead">
+    <strong>Name of Event:</strong>
+    <span th:text="${eventName}"></span>
+</div>
 
 <script type="module">
 	import Vue from 'vue';
@@ -35,5 +50,5 @@
 	}
 
 	new Vue(EventHandling).$mount("#event-handling");
-</script>
+</script> -->
 </html>

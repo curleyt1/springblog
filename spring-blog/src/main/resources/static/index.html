@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p>Get your greeting <a href="/greeting">here</a></p>
+</body>
+
+<script 
+  src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js">
+</script>
+<script 
+  src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js">
+</script>
+
+<script type="module">
+	import Vue from 'vue';
+
+	const EventHandling = {
+		data() {
+			return {
+				message: 'Hello Vue.js!'
+			}
+		},
+		methods: {
+			reverseMessage() {
+				this.message = this.message
+					.split('')
+					.reverse()
+					.join('')
+			}
+		}
+	}
+
+	new Vue(EventHandling).$mount("#event-handling");
+</script>
+</html>
